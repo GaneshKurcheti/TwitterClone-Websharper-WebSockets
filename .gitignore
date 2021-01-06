@@ -1,0 +1,17 @@
+bin/
+obj/
+paket-files/
+packages/
+.vs/
+*.user
+**/Content/WebSharper/
+**/Scripts/WebSharper/
+build/
+.vscode/
+.fake/
+.paket/.store/
+.paket/*.exe
+.paket/fake
+.paket/paket
+.paket/paket.bootstrapper
+/WebSharper.AspNetCore.Tests.CSharp/Properties
