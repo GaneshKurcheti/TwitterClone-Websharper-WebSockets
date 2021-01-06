@@ -1,4 +1,4 @@
-# TWITTER CLONE using Web sockets implementation of WebSharper in f# #
+# TWITTER CLONE using Web sockets implementation of WebSharper in F# #
 
 #### Abstract:
     * The goal of this project is to implement twitter API using WebSharper web framework to implement web socket interface with functionalities 
