@@ -20,10 +20,10 @@ let WebSocketTest (endpoint : WebSocketEndpoint<Server.S2CMessage, Server.C2SMes
     // This is used to hold the messages received from the server.
     let serverMessagesContainer = Elt.pre [] []
     let messagesHeader  =  Elt.div [] [
-                                    Elt.h3[][text "Messages from server"]
+                                    Elt.h3 [] [text "Messages from server"]
                                 ]
     // This is used to hold the tweets returned from the server.
-    let tweetContainer = Elt.div[][]
+    let tweetContainer = Elt.div [] []
 
     // This method is used to write to server .
     let writen fmt =
@@ -148,8 +148,8 @@ let WebSocketTest (endpoint : WebSocketEndpoint<Server.S2CMessage, Server.C2SMes
 
     // Register new user form.
     let registerForm = 
-        div [][
-                Doc.Input [
+        div [] [
+                Doc.InputType.Text [
                     attr.``class`` "form-control"]  registerUserName
                 button [ 
                     attr.``class`` "btn btn-primary"
@@ -157,8 +157,8 @@ let WebSocketTest (endpoint : WebSocketEndpoint<Server.S2CMessage, Server.C2SMes
             ]
     // Subscribe user form.
     let subscribeForm = 
-        div [][
-                Doc.Input [
+        div [] [
+                Doc.InputType.Text [
                     attr.``class`` "form-control"]  subscribeUserName
                 button [ 
                     attr.``class`` "btn btn-primary"
@@ -166,8 +166,8 @@ let WebSocketTest (endpoint : WebSocketEndpoint<Server.S2CMessage, Server.C2SMes
             ]
     // Unsubscribe user form.
     let unsubscribeForm  = 
-        div [][
-                Doc.Input [
+        div [] [
+                Doc.InputType.Text [
                     attr.``class`` "form-control"]  unSubscribeUserName
                 button [ 
                     attr.``class`` "btn btn-primary"
@@ -175,8 +175,8 @@ let WebSocketTest (endpoint : WebSocketEndpoint<Server.S2CMessage, Server.C2SMes
             ]
     // create Tweet  form.
     let createTweetForm = 
-        div [][
-                Doc.Input [
+        div [] [
+                Doc.InputType.Text [
                     attr.``class`` "form-control"]  tweetContent
 
                 button [ 
@@ -185,8 +185,8 @@ let WebSocketTest (endpoint : WebSocketEndpoint<Server.S2CMessage, Server.C2SMes
             ]
     // Search for hashtag form.
     let hashTagForm = 
-        div [][
-                Doc.Input [
+        div [] [
+                Doc.InputType.Text [
                     attr.``class`` "form-control"]  hashTagQuery
 
                 button [ 
@@ -195,8 +195,8 @@ let WebSocketTest (endpoint : WebSocketEndpoint<Server.S2CMessage, Server.C2SMes
             ]
     // Mention form.
     let mentionForm = 
-        div [][
-                Doc.Input [
+        div [] [
+                Doc.InputType.Text [
                 attr.``class`` "form-control"]  mentionQuery
 
                 button [ 
@@ -205,7 +205,7 @@ let WebSocketTest (endpoint : WebSocketEndpoint<Server.S2CMessage, Server.C2SMes
             ]
     // Login &  Logout buttons.
     let loginAndLogout = 
-        div [attr.``class`` "user-login-logout"][
+        div [attr.``class`` "user-login-logout"] [
                 button [attr.``class`` "btn btn-success" 
                         on.click (enableOnClick "Login") ] [ text "Login" ]
                 button [attr.``class`` "btn btn-danger" 
