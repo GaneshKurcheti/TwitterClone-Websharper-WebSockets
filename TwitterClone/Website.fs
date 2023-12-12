@@ -53,7 +53,7 @@ type MyWebsite(logger: ILogger<MyWebsite>) =
             let aboutPageLink = ctx.Link About
             let wsep = WebSocketClient.MyEndPoint (ctx.RequestUri.ToString())
             IndexTemplate()
-                .Main(client <@ Client.Main aboutPageLink wsep @>)
+                .Main(ClientServer.client (Client.Main aboutPageLink wsep))
                 .Doc()
             |> Content.Page
         | About ->         
